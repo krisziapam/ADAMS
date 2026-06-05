@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>ADAMS - Automated Document Admission Management System</display-name>
+
+    <!-- All servlets use @WebServlet annotations - NO mappings needed here -->
+
+    <!-- ============== WELCOME FILES ============== -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- ============== SESSION CONFIGURATION ============== -->
+    <session-config>
+        <tracking-mode>COOKIE</tracking-mode>
+        <cookie-config>
+            <secure>false</secure>
+            <http-only>true</http-only>
+        </cookie-config>
+    
+
+   
+        <!-- Timeout in MINUTES -->
+        <session-timeout>15</session-timeout>
+    </session-config>
+
+    
+    <!-- ============== ERROR PAGES ============== -->
+    
+    <!--
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+    -->
+
+
+    
+
+</web-app>
