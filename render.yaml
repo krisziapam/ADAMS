@@ -1,0 +1,13 @@
+services:
+  - type: web
+    runtime: docker
+    name: adams-postgresql-springboot
+    plan: free
+    healthCheckPath: /doc_ad_sys/login.jsp
+    envVars:
+      - key: ADAMS_DB_URL
+        sync: false
+      - key: ADAMS_DB_USER
+        sync: false
+      - key: ADAMS_DB_PASSWORD
+        sync: false
